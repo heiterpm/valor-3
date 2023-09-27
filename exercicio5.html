@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heiter</title>
     <style>
+        h1{
+            color: red;
+        }
         table, th, td {
           border: 1px solid black;
+          border-width: 1px;
+          border-style: solid;
+          border-color: black;
           border-collapse: collapse;
         }
         table {
@@ -38,18 +44,48 @@
             color: #fff;
             transform: translateY(-7px);
         }
+        .padding-border{
+            width: 200px;
+            height: 100px;
+            border: 5px solid black;
+            background-color: gray;
+            border-left-width: 1px;
+            border-bottom-color: red;
+            border-bottom-style:dotted ;
+            padding: 20px;
+            margin-bottom: 50px;
+            margin-right: 10px;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
+    <div style="background-color: red; display: flex; justify-content: center;">
+        aaaaa
+    </div>
+    <div style="display: flex; background-color: aqua; justify-content: center;">
+        <div style="width: 50%; text-align: center;">
+            bbbb
+        </div>
+        <div style="width: 50%; text-align: center; border-left: 1px solid black;">
+            ccc
+        </div>
+    </div>
     <div class="align-text">
-<h1>Pagina ultra secreta</h1>
+        <h1>Pagina ultra secreta</h1>
         <img src="imagens/ok.gif" alt="Um ok da disney"><br>
-<a href ="index.html">Exercicio nº1</a><br>
-        <a href ="exercicio2.html">Exercicio nº2</a><br>
-        <a href ="exercicio3.html">Exercicio nº3</a><br>
-        <a href ="exercicio4.html">Exercicio nº4</a><br>
-        <a href ="https://www.google.com/"><b>Acessar google</b></a>
-        <br><br>
+        <div style="display: flex; justify-content: center;">
+            <div class="padding-border">
+                <a href ="index.html">Exercicio nº1</a><br>
+                <a href ="exercicio2.html">Exercicio nº2</a><br>
+                <a href ="exercicio3.html">Exercicio nº3</a><br>
+                <a href ="exercicio4.html">Exercicio nº4</a><br>
+                <a href ="https://www.google.com/"><b>Acessar google</b></a>
+            </div>
+            <div>
+            </div>
+        </div>
+        Janeiro <span style="margin-left: 5px;">Fevereiro</span>
     </div>
     <table>
         <tr>
@@ -57,7 +93,7 @@
           <th>Despesas</th>
         </tr>
         <tr>
-          <td>Janeiro</td>
+          <td>Janeiro <span>Fevereiro</span></td>
           <td>$100</td>
         </tr>
         <tr>
