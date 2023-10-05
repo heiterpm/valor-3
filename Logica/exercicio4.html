@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1>Exercicio 2</h1>
+    <p>
+        Exemplo 
+        paragrafo 
+        1
+    </p>
+    <hr>
+    
+    <p>
+        Paragrafo
+        2 <br>
+        Continua na proxima linha
+        <br>
+        continuando <button data-toggle-text="Que horrível! Mudar de volta!">
+            Usar caldeirão nos parágrafos
+          </button>
+    </p>
+    <script>
+        var nome = prompt('Digite seu nome:');
+        var nascimento = prompt('Digite o ano de seu nascimento:');
+        var idade = 2023 - nascimento;
+        var nomeCorreto = nome == 'João' || nome == 'Maria'
+        var idadeCorreta = idade >= 18 && idade <= 60
+        resposta = nomeCorreto && idadeCorreta;
+        alert('Os dados digitados contem João ou Maria e tem entre 18 e 60 anos' + resposta);
+    </script>
+</body>
+</html>
