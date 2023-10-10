@@ -24,19 +24,20 @@
           </button>
     </p>
     <script>
-        //Entrada
-        var nome = prompt('Digite seu nome:');
-        //Entrada
-        var nascimento = prompt('Digite o ano de seu nascimento:');
-        //Calculo de idade
-        var idade = 2023 - nascimento;
-        //Condição 1
-        var nomeCorreto = (nome == 'João') || (nome == 'Maria')
-        //Condição 2
-        var idadeCorreta = (idade >= 18) && (idade <= 60)
-        //Resultado confirido
-        var resposta = nomeCorreto && idadeCorreta;
-        alert('Os dados digitados contem João ou Maria e tem entre 18 e 60 anos' + resposta);
+        var a = prompt('Qtde de componentes A:');
+        var b = prompt('Qtde de componentes B:');
+        var c = prompt('Qtde de componentes C:');
+        var placasA = a/2;
+        var placasB = b/3;
+        var placasC = c/7;
+        var maximo = placasA;
+        if (placasB < maximo) {
+            maximo = placasB;
+        }
+        if (placasC < maximo) {
+            maximo = placasC;
+        }
+        alert(maximo);
     </script>
 </body>
 </html>
