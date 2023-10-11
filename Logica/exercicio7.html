@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1>Exercicio 2</h1>
+    <p>
+        Exemplo 
+        paragrafo 
+        1
+    </p>
+    <hr>
+    
+    <p>
+        Paragrafo
+        2 <br>
+        Continua na proxima linha
+        <br>
+        continuando <button data-toggle-text="Que horrível! Mudar de volta!">
+            Usar caldeirão nos parágrafos
+          </button>
+    </p>
+    <script>
+        //Entrada
+        var senha = prompt('Digite senha:');
+        ///Variavel de validação (começa como true)
+        var valida = true;
+
+        //Valida = o resto do ultimo digito de senha é diferente de 0
+        valida = (senha % 10) >= 1
+        //Dividimos por 10 para passar a virgula uma casa a esquerda 948,6
+        senha = senha/10
+        //Valida o numero na posição 3 E(&&) se a validação anterior foi verdadeira
+        valida = (senha % 10) >= 1 && valida
+        senha = senha/10
+        valida = (senha % 10) >= 1 && valida
+        senha = senha/10
+        valida = (senha % 10) >= 1 && valida
+        senha = senha/10
+
+        if (valida) {
+            alert('Senha válida.');
+        } else {
+            alert('Senha inválida.');
+        }
+    </script>
+</body>
+</html>

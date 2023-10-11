@@ -24,19 +24,46 @@
           </button>
     </p>
     <script>
-        var a = prompt('Qtde de componentes A:');
-        var b = prompt('Qtde de componentes B:');
-        var c = prompt('Qtde de componentes C:');
+        //Entrada
+        var a = prompt('Digite a quantidade de peças A');
+        console.log(a);
+        //Entrada
+        var b = prompt('Digite a quantidade de peças: B');
+        console.log(b);
+        //Entrada
+        var c = prompt('Digite a quantidade de peças: C');
+        console.log(c);
+
+        //Maximo de placas feitas pela peça
         var placasA = a/2;
+        console.log(placasA);
+        //PlacasA = 2
+
+        //Maximo de placas feitas pela peça
         var placasB = b/3;
+        console.log(placasB);
+        //PlacasB = 3
+
+        //Maximo de placas feitas pela peça
         var placasC = c/7;
+        console.log(placasC + 'Oi eu sou placasC');
+        //PlacasC= 100
+
+        //Define variavel maximo
         var maximo = placasA;
+        //maximo = placasA = 2
+
+        // Se placasA/maximo for maior que placas B
         if (placasB < maximo) {
             maximo = placasB;
+            //Maximo foi atribuido como 
         }
+
         if (placasC < maximo) {
             maximo = placasC;
+            //Maximo foi atribuido como 
         }
+        
         alert(maximo);
     </script>
 </body>
