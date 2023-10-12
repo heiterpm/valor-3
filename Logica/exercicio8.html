@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h1>Exercicio 2</h1>
+    <p>
+        Exemplo 
+        paragrafo 
+        1
+    </p>
+    <hr>
+    
+    <p>
+        Paragrafo
+        2 <br>
+        Continua na proxima linha
+        <br>
+        continuando <button data-toggle-text="Que horrível! Mudar de volta!">
+            Usar caldeirão nos parágrafos
+          </button>
+    </p>
+    <script>
+        //Declaração de variavel input(usuario digita valor)
+        var m3 = prompt('Digite o consumo em m3:');
+        //Criando valor tarifa, inicial igual a 0
+        var tarifa = 0;
+
+        //SE for até 20 valor*6
+        if (m3 <= 20) {
+            //O novo valor de tarifa sera igual a quantidade de m3 * 1.6
+            tarifa = m3 * 1.6;
+
+            //Caso não seja <= 20, SENAO SE m3 <=50
+        } else if (m3 <= 50) {
+            //O novo valor de tarifa sera igual a quantidade de m3 * 2.8
+            tarifa = m3 * 2.8;
+        } else {
+            //O novo valor de tarifa sera igual a quantidade de m3 * 4.2
+            tarifa = m3 * 4.2;
+        }
+        //Se o valor da tarifa for menor ou igual a 100 executa o código dentro
+        if (tarifa <= 100) {
+            //O novo valor de tarifa é igual a tarifa -5% de tarifa
+            tarifa = tarifa - 0.05 * tarifa;
+
+            //Se o valor nao for menor igual a 100 e é maior que 200
+        } else if (tarifa > 200) {
+            //
+            tarifa = 1.10 * tarifa;
+        }
+        var array1 = [12,13,14,15,16,17]
+        for (let index = 0; index < array1.length; index++) {
+            console.log(array1[index])
+        }
+    </script>
+</body>
+</html>
