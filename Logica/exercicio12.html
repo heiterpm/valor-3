@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        const cds = prompt("Digite a quantidade de CDs: ");
+        let preco = 0;
+
+        for (let i = 0; i < cds; i++) {
+            preco += parseInt(prompt(`Digite o preço do CD ${i + 1}: `));
+        }
+
+        console.log(`Preço total: R$${preco}`);
+        console.log(`Média de custo por CD: R$${(preco / cds)}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        var validacao = true
+        while(validacao) {
+            tabuada = prompt('Digite o numero a ser tabuado')
+            comecar = prompt('Digite o numero que iniciará a tabuada')
+            fim = prompt('Digite o numero que finalizara a tabuada')
+            if(comecar > fim) {
+                alert('Valor final deve ser maior que o valor inicial')
+            } else{
+                validacao = false
+            }
+        }
+        console.log(`Vou montar a tabuada do ${tabuada} começando pelo ${comecar} e terminando no ${fim}`)
+        for (let index = comecar; index <= fim; index++) {
+            console.log(`${tabuada} x ${index} = ${tabuada*index}`);
+        }
+    </script>
+</body>
+</html>
