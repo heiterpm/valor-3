@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        var caracteres = [];
+        let consoantes = 0;
+
+        for (let i = 0; i < 10; i++) {
+        var caractere = prompt("Digite um caractere: ")[0];
+        caracteres.push(caractere);
+        }
+
+        for (let i = 0; i < caracteres.length; i++) {
+            let c = caracteres[i].toUpperCase();
+            if (c !== "A" && c !== "E" && c !== "I" && c !== "O" && c !== "U") {
+                consoantes++;
+            }
+        }
+
+        console.log(`Foram lidas ${consoantes} consoantes.`);
+    </script>
+</body>
+</html>

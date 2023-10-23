@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //Declaração do array
+        var lista = [];
+
+        //Repetição no numero de vezes que precisava passar
+        for (let i = 0; i < 5; i++) {
+            //Variavel numero vai ser igual ao numero digitado
+            var numero = prompt(`Digite o ${i + 1}º número: `);
+            //Adição do item ao final do array
+            lista.push(numero);
+        }
+
+        console.log("Os números digitados são:");
+
+        //Repetição baseado no tamanho do array
+        for (let i = 0; i < lista.length; i++) {
+            //Exibirá log do item na posição i do array
+            console.log(lista[i]);
+        }
+    </script>
+</body>
+</html>
