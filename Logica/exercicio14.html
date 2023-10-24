@@ -7,16 +7,32 @@
 </head>
 <body>
     <script>
+        let arrayCons = ["A","E","I","O","U"]
+
+
+        //Declaração de variaveis, array
         var caracteres = [];
+        //Declaração contador de consoantes
         let consoantes = 0;
 
+        //Entrada de dados conforme exercicio pedia, 10 itens
         for (let i = 0; i < 10; i++) {
-        var caractere = prompt("Digite um caractere: ")[0];
-        caracteres.push(caractere);
+            //Entrada de dados
+            var caractere = prompt("Digite um caractere: ");
+            //Adiciono o item no array
+            caracteres.push(caractere);
         }
 
         for (let i = 0; i < caracteres.length; i++) {
+
+            //Atribuição de item do array para variavel c
             let c = caracteres[i].toUpperCase();
+
+            //if (!arrayCons.includes(c)) {
+            //    consoantes++;
+            //}
+
+            //Caractere digitado for diferente de a,e,i,o,u
             if (c !== "A" && c !== "E" && c !== "I" && c !== "O" && c !== "U") {
                 consoantes++;
             }
