@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //Declaração de array vazio
+        var vetorA = [];
+        //Declaração do valor inicial de somaQuadrados
+        let somaDosQuadrados = 0;
+
+        //Repita 10 vezes o seguinte trecho de código
+        for (let i = 0; i < 10; i++) {
+            //Declaração da variavel numero, contém o valo digitado em forma de numero
+            var numero = parseInt(prompt(`Digite o ${i + 1}º número inteiro: `));
+            //Adição do numero digitado ao final do array vetorA
+            vetorA.push(numero);
+        }
+
+        // Loop para calcular a soma dos quadrados
+        for (let i = 0; i < vetorA.length; i++) {
+            //variavel somaDosQurados recebe valor de somaDosQuadrados + valor do item na posição i Elevado a 2
+            somaDosQuadrados += vetorA[i] ** 2;
+        }
+
+        //Log do array
+        console.log("Vetor A: " + vetorA);
+        //Log da soma dos quadrados
+        console.log(`A soma dos quadrados dos elementos do vetor A é ${somaDosQuadrados}`);
+    </script>
+</body>
+</html>
