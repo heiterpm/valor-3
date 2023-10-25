@@ -7,21 +7,31 @@
 </head>
 <body>
     <script>
-        var x = parseInt(prompt('Digite o tamanho do array'));
+        //Declaração mais inserção de valor do tamanho do array
+        var tamanhoArray = parseInt(prompt('Digite o tamanho do array'));
+        //Declaração array notas vazio
         var notas = [];
+        //Declaração valor total como 0
         var valorTotal = 0;
 
-        for (let i = 0; i < x; i++) {
-            var nota = parseFloat(prompt(`Digite a ${i + 1}ª nota: `));
+        //Repetição for utilizando o limite como variavel tamanhoArray
+        for (let i = 0; i < tamanhoArray; i++) {
+            //Cria variavle nota e atribui valor digitado pelo usuario
+            var nota = prompt(`Digite a ${i + 1}ª nota: `);
+            //Inserindo valor da variavel nota no final do array
             notas.push(nota);
         }
 
+        //Repetição utilizando o limite como tamanho do array notas
         for (let i = 0; i < notas.length; i++) {
+            //Igual a valorTotal = valorTotal + notas[i]. Somando todos os valores do array notas
             valorTotal += notas[i];
         }
 
+
         console.log("Notas digitadas: " + notas);
-        console.log(`A média das notas é ${valorTotal / x}`);
+        
+        console.log(`A média das notas é ${valorTotal / tamanhoArray}`);
     </script>
 </body>
 </html>
