@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let b = 0;
+        let c = 1;
+
+        let d = parseInt(prompt("Digite o d do array:"));
+
+        for (let i = 0; i < d; i++) {
+            let numero = parseInt(prompt("Digite um número inteiro:"));
+            a.push(numero);
+
+            b += numero;
+            c *= numero;
+        }
+
+        console.log("A b dos números é: " + b);
+        console.log("A c dos números é: " + c);
+        console.log("Os a digitados são: " + a);
+    </script>
+</body>
+</html>

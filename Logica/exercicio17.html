@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //declaração de variavel chamado numeros recebe o valor inicial como array
+        let numeros = [];
+        //declaração de variavel chamado pares recebe o valor inicial como array
+        let pares = [];
+        //declaração de variavel chamado impares recebe o valor inicial como array
+        let impares = [];
+
+        //Laço de repetição for; declaração de váriavel i com valor inicial 0; repetir enquanto i for menor que 20; contador i ira acrescentar 1 a cada repetição
+        for (let i = 0; i < 20; i++) {
+            //declaração de variavel chamada numero, recebe valor inicial como valor digitado pelo prompt, entendido como numero
+            let numero = parseInt(prompt("Digite um número inteiro:"));
+            //array numeros utiliza o método push para adicionar o valor da variavel numero no array numeros
+            numeros.push(numero);
+
+            //se a condição(resto do valor da variavel numero divido por 2 for igual a 0 ) execute o trecho de código
+            //Caso o numero atenda a condição, ele é par.
+            if (numero % 2 === 0) {
+                //array pares utiliza o método push para adicionar o valor da variavel numero no array pares
+                pares.push(numero);
+
+            //Else sempre sera executado quando a condição if for igual a false
+            } else {
+                //array pares utiliza o método push para adicionar o valor da variavel numero no array impares
+                impares.push(numero);
+            }
+        }
+
+        //Saida de dados no console com valor de devidas variaveis
+        console.log("Números: ", numeros);
+        console.log("Pares: ", pares);
+        console.log("Ímpares: ", impares);
+    </script>
+</body>
+</html>
