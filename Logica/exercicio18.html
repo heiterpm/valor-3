@@ -7,23 +7,39 @@
 </head>
 <body>
     <script>
-        let a = [];
-        let b = 0;
-        let c = 1;
+        let tamanhoArray = parseInt(prompt("Digite o d do array:"));
+        function programa(tamanhoArray) {
+            //declaração de variavel chamado arrayNumeros recebe o valor inicial como array
+            let arrayNumeros = [];
+            //declaração de variavel chamado somaNumeros recebe o valor inicial como 0
+            let somaNumeros = 0;
+            //declaração de variavel chamado multiplicacaoNumeros recebe o valor inicial como 1
+            let multiplicacaoNumeros = 1;
 
-        let d = parseInt(prompt("Digite o d do array:"));
+            //declaração de variavel chamado tamanhoArray recebe o valor inicial como digitado no prompt, sendo um valor inteiro
 
-        for (let i = 0; i < d; i++) {
-            let numero = parseInt(prompt("Digite um número inteiro:"));
-            a.push(numero);
 
-            b += numero;
-            c *= numero;
+            //Laço de repetição for; declaração de váriavel i com valor inicial 0; repetir enquanto i for menor que o tamanho do array; contador i ira acrescentar 1 a cada repetição
+            for (let i = 0; i < quantidadeNumeros; i++) {
+
+                //declaração de variavel chamado numero recebe o valor inicial valor inteiro digitado no prompt
+                let numero = parseInt(prompt("Digite um número inteiro:"));
+                //array pares utiliza o método push para adicionar o valor da variavel numero no array arrayNumeros
+                arrayNumeros.push(numero);
+
+                //Novo valor de somaNumeros é igual valor de somaNumeros + numero
+                somaNumeros += numero;
+                //Novo valor de multiplicacaoNumeros é igual valor de multiplicacaoNumeros & numero
+                multiplicacaoNumeros *= numero;
+            }
+
+            //Saida de dados
+            console.log("A somaNumros dos números é: " + somaNumeros);
+            console.log("A c dos números é: " + multiplicacaoNumeros);
+            console.log("Os a digitados são: " + arrayNumeros);
         }
 
-        console.log("A b dos números é: " + b);
-        console.log("A c dos números é: " + c);
-        console.log("Os a digitados são: " + a);
+        programa(tamanhoArray)
     </script>
 </body>
 </html>

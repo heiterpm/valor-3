@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        var jorge = parseInt(prompt('Insiar o primeiro numero'))
+        var numero2 = parseInt(prompt('Insiar o segundo numero'))
+        var apoio = 0
+
+        //Declaração de funcao, com parametros de nome num1 e num2
+        function somaNumeros(peixe,num2) {
+            //Log do valor atribuido ao parametro num1 + valor atribuido ao parametro num2
+            console.log(peixe + num2);
+        }
+        function multiplicaNumeros(num1, num2) {
+            //Retorna para fora da função valor atribuido ao parametro num1 * valor atribuido ao parametro num2
+            return num1 * num2
+        }
+        function divideNumeros(num1, num2) {
+            //Atualiza variavel apoio com valor atribuido ao parametro num1 + valor atribuido ao parametro num2
+            apoio = num2/num1
+        }
+
+        //Chama a função somaNumeros com os valores 3 e 4
+        somaNumeros(3,4)
+        //Log do retorno da função multiplicaNumeros, recebendo valores 4 e 4
+        console.log(multiplicaNumeros(4,4));
+        //Executa função divideNumeros com valor da variavel jorge dividido pelo valor da variavel numero2
+        divideNumeros(jorge,numero2)
+        //Log no novo valor atualizado de numero
+        console.log(apoio);
+        
+    </script>
+</body>
+</html>

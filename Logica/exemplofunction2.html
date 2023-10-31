@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        function entradaDados() {
+            var tamanhoArray = parseInt(prompt('Digite o tamanho do array'));
+            var notas = [];
+
+            for (let i = 0; i < tamanhoArray; i++) {
+                var nota = parseInt(prompt(`Digite a ${i + 1}ª nota: `));
+                notas.push(nota);
+            }
+
+            return notas;
+        }
+
+        function processamentoDados(notas) {
+            var valorTotal = 0;
+
+            for (let i = 0; i < notas.length; i++) {
+                valorTotal += notas[i];
+            }
+
+            return valorTotal / notas.length;
+        }
+
+        function saidaDados(notas, media) {
+            console.log("Notas digitadas: " + notas);
+            console.log(`A média das notas é ${media}`);
+        }
+
+        var notas = entradaDados();
+        var media = processamentoDados(notas);
+        saidaDados(notas, media);
+    </script>
+</body>
+</html>
