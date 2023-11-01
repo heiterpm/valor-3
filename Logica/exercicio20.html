@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //Declaração da função programaCovnersao
+        function programaConversao() {
+            //Declaração variavel inserida pelo usuario
+            var temp = parseInt(prompt('Digite a temperatura'))
+
+            //Declaração de função com um parametro
+            function grausCelsiusParaKelvin(grausCelsius) {
+                //Conta de celsius para kelvin e retorna o valor
+                return grausCelsius + 273.15;
+            }
+
+            //Declaração de função com um parametro
+            function kelvinParaFahrenheit(kelvin) {
+                //Conta de kelvin para Fahrenheit e retorna o valor
+                return (kelvin - 273.15) * 9/5 + 32;
+            }
+
+
+            //Log do retorno da função grausCelsiusParaKelvin
+            console.log(grausCelsiusParaKelvin(temp));
+            //Log do retorno da função kelvinParaFahrenheit utilizando como parâmetro o retorno da função grausCelsiusParaKelvin
+            console.log(kelvinParaFahrenheit(grausCelsiusParaKelvin(temp)));
+        }
+
+        programaConversao()
+
+        function programaCep() {
+            var cep = prompt('Digite seu cep')
+            function addHyphen(inputString) {
+                let result = '';
+                for (let i = 0; i < inputString.length; i++) {
+                    result += inputString[i];
+                    if (i === inputString.length - 4 && i !== 0) {
+                        result += '-';
+                    }
+                }
+
+                return result;
+            }
+
+            console.log(addHyphen(cep));
+        }
+        programaCep()
+        
+        
+    </script>
+</body>
+</html>

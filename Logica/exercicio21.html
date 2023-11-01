@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        
+        function contaVogais(texto) {
+            var cont = 0;
+            texto=texto.toLowerCase();
+            for(var i=0; i<texto.length; i++){
+                if(texto.charAt(i)=="a"||texto.charAt(i)=="e"||texto.charAt(i)=="i"||texto.charAt(i)=="o"||texto.charAt(i)=="u"){
+                    cont++; //Incrementa a contagem de vogais
+                }
+            }
+            return cont;
+        }
+        function contaLetras(texto, letra) {
+            var cont=0;
+            texto=texto.toLowerCase(); //Coloca texto em minúsculas
+            for(var i=0; i<texto.length; i++){
+                if(texto.charAt(i) == letra){
+                    cont++; //Incrementa contagem
+                }
+            }
+            return cont;
+        }
+    </script>
+</body>
+</html>

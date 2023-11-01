@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        //Declaração da função programaCovnersao
+        function programaConversao() {
+            //Declaração variavel inserida pelo usuario
+            var temp = parseInt(prompt('Digite a temperatura'))
+
+            //Declaração de função com um parametro
+            function grausCelsiusParaKelvin(grausCelsius) {
+                //Conta de celsius para kelvin e retorna o valor
+                return grausCelsius + 273.15;
+            }
+
+            //Declaração de função com um parametro
+            function kelvinParaFahrenheit(kelvin) {
+                //Conta de kelvin para Fahrenheit e retorna o valor
+                return (kelvin - 273.15) * 9/5 + 32;
+            }
+
+
+            //Log do retorno da função grausCelsiusParaKelvin
+            console.log(grausCelsiusParaKelvin(temp));
+            //Log do retorno da função kelvinParaFahrenheit utilizando como parâmetro o retorno da função grausCelsiusParaKelvin
+            console.log(kelvinParaFahrenheit(grausCelsiusParaKelvin(temp)));
+        }
+
+        function programaTriangulo() {
+            //Declaração variavel inserida pelo usuario
+            var valorBase = parseInt(prompt('Digite o valor de base'))
+            //Declaração variavel inserida pelo usuario
+            var valorAltura = parseInt(prompt('Digite o valor de altura'))
+
+            //Declaração de função com dois parametro
+            function areaTriangulo(base, altura) {
+                //Conta de area do triangulo e retornando o valor
+                return (base * altura) / 2;
+            }
+
+            //Log do retorno da função areaTriangulo, passando para ela os valores de valorBase e valorAltura
+            console.log(areaTriangulo(valorBase,valorAltura));
+        }
+
+        function programaCirculo() {
+            //Declaração variavel inserida pelo usuario
+            var valorRaio = parseInt(prompt('Digite o valor do raio'))
+
+            //Declaração de função com um parametro
+            function circuloPerimetroArea(raio) {
+                //Definido valor de pi
+                const PI = 3.14;
+            
+                //Criar variaveis do calculo de perimetro e area
+                var valorPerimetro = 2 * PI * raio;
+                var valorArea = PI * (raio*raio);
+            
+                //Retornando um objeto
+                return {
+                    perimetro: valorPerimetro,
+                    area: valorArea
+                }
+            }
+
+            //Atribuindo valor retornado da função para variavel resultado, utilizando valorRaio como valor do parametro
+            var resultado = circuloPerimetroArea(valorRaio);
+            console.log('Perímetro: ' + resultado.perimetro);
+            console.log('Área: ' + resultado.area);
+        }
+        
+        
+    </script>
+</body>
+</html>
