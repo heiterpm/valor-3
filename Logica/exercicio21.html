@@ -7,27 +7,35 @@
 </head>
 <body>
     <script>
-        
-        function contaVogais(texto) {
-            var cont = 0;
-            texto=texto.toLowerCase();
-            for(var i=0; i<texto.length; i++){
-                if(texto.charAt(i)=="a"||texto.charAt(i)=="e"||texto.charAt(i)=="i"||texto.charAt(i)=="o"||texto.charAt(i)=="u"){
-                    cont++; //Incrementa a contagem de vogais
+        function progVogais() {
+            var palavra = parseInt(prompt('Digite a palavra'))
+            function contaVogais(texto) {
+                var cont = 0
+                texto=texto.toLowerCase();
+                for(var i=0; i<texto.length; i++){
+                    if(texto[i]=="a"||texto[i]=="e"||texto[i]=="i"||texto[i]=="o"||texto[i]=="u"){
+                        cont++;
+                    }
                 }
+                return cont
             }
-            return cont;
         }
-        function contaLetras(texto, letra) {
-            var cont=0;
-            texto=texto.toLowerCase(); //Coloca texto em minúsculas
-            for(var i=0; i<texto.length; i++){
-                if(texto.charAt(i) == letra){
-                    cont++; //Incrementa contagem
+        function progrLetras() {
+            var palavra = parseInt(prompt('Digite a palavra'))
+            function contaLetras(texto, letra) {
+                var cont=0
+                texto=texto.toLowerCase()
+                for(var i=0; i<texto.length; i++){
+                    if(texto[i] == letra){
+                        cont++
+                    }
                 }
+                return cont
             }
-            return cont;
         }
+
+        var texto= 'texto'
+        console.log(texto[0]);
     </script>
 </body>
 </html>
