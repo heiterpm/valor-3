@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        let array = [];
+
+
+        function inserirEndereco(obj) {
+            array.push(obj);
+        }
+
+        function main() {
+            
+            while (true) {
+                //Criação de uma variavel objeto
+                let obj = {
+                    //Criação de uma propriedade chamada rua, que terá o valor digitado pelo usuario
+                    rua: prompt("Digite a rua:"),
+                    numero: prompt("Digite o número:"),
+                    cidade: prompt("Digite a cidade:"),
+                    estado: prompt("Digite o estado:"),
+                    cep: prompt("Digite o CEP:"),
+                };
+                    //Inserção do objeto obj no array
+                    inserirEndereco(obj);
+                    let resposta = prompt("Deseja inserir outro endereço? (s/n)");
+                    //Verificando se valor for == n
+                    if (resposta.toLowerCase() === "n") {
+                        //Quebra o laço de repetição
+                        break;
+                    }
+            }
+            console.log(array);
+        }
+
+    main();
+    </script>
+</body>
+</html>

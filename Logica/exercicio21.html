@@ -8,34 +8,86 @@
 <body>
     <script>
         function progVogais() {
-            var palavra = parseInt(prompt('Digite a palavra'))
+            //Inserção de dados por parte do usuario
+            var palavra = prompt('Digite a palavra')
+            //Declaração da função com um parametro
             function contaVogais(texto) {
+                //Iniciar contador como 0
                 var cont = 0
+
+                //Transforma todo texto em minusculo
                 texto=texto.toLowerCase();
+                
+                //Loop que ira repetir x vezes parando ao atingir a quantidade de letras da palavra
                 for(var i=0; i<texto.length; i++){
+                    //Verifica se letra na posição i de texto é uma vogal
                     if(texto[i]=="a"||texto[i]=="e"||texto[i]=="i"||texto[i]=="o"||texto[i]=="u"){
+                        //Caso seja adiciona 1 no contador
                         cont++;
                     }
                 }
+                //Retorna valor de cont
                 return cont
             }
+            //saida de dados
+            console.log('Vogais existente: ' + contaVogais(palavra));
         }
+
         function progrLetras() {
-            var palavra = parseInt(prompt('Digite a palavra'))
+            //Inserção de dados por parte do usuario
+            var palavra = prompt('Digite a palavra')
+            var letraDigitada = prompt('Digite o caractere')
+
+            //Declaração da função com dois parametros
             function contaLetras(texto, letra) {
+                //Iniciar contador como 0
                 var cont=0
+                //Transforma todo texto em minusculo
                 texto=texto.toLowerCase()
+
+                //Loop que ira repetir x vezes parando ao atingir a quantidade de letras da palavra
                 for(var i=0; i<texto.length; i++){
+                    //Verifica se letra na posição i de texto é o caractere digitado
                     if(texto[i] == letra){
+                        //Caso seja adiciona 1 no contador
                         cont++
                     }
                 }
+                //Retorna valor de cont
                 return cont
             }
+            //saida de dados
+            console.log(contaLetras(palavra, letraDigitada));
         }
 
-        var texto= 'texto'
-        console.log(texto[0]);
+        function programaCep() {
+            //Inserção de dados por parte do usuario
+            var cep = prompt('Digite seu cep')
+
+            //Declaração da função com um parametro
+            function addHyphen(inputString) {
+                //Declaração de variavel resultado como string vazia
+                let result = '';
+
+                //Loop que ira repetir x vezes parando ao atingir a quantidade de letras do cep
+                for (let i = 0; i < inputString.length; i++) {
+                    //Adicionando numero da posição i de inputString em resultado
+                    result += inputString[i];
+                    //Quando i for igual a 4(inputString.length = 8 ) i[7]
+                    if (i === inputString.length - 4) {
+                        //Adicionando traço quando i for igual a 4
+                        result += '-';
+                    }
+                }
+
+                //Retorno dos dados
+                return result;
+            }
+
+            console.log(addHyphen(cep));
+        }
+        programaCep()
+
     </script>
 </body>
 </html>

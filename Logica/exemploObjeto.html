@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        var obj = [
+  {
+    nome: 'nomelegal',
+    numero: 123
+  },
+  {
+    nome: 'Nome2',
+    numero: 321
+  }
+];
+
+console.log(obj[0]);
+setTimeout(() => {
+  obj[0].nome = 'Juiz de fora';
+  console.log(obj[0]);
+}, 3000);
+
+    </script>
+</body>
+</html>

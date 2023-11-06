@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        
+        function insertDevs(devs) {
+        let input = [];
+
+        while (true) {
+            let skills = []
+            let name = prompt('Digite o nome do desenvolvedor:');
+            while(true) {
+                let skill = prompt('Digite as habilidades do desenvolvedor, clique em cancelar para finalizar as habilidades');
+                if(skill) {
+                    skills.push(skill)
+                } else {
+                    break
+                }
+            }
+
+            input.push({
+                nome: name,
+                habilidades: skills
+            });
+            let resposta = prompt("Deseja inserir outro usuario? (s/n)");
+            if (resposta.toLowerCase() === "n") {
+                break;
+            }
+        }
+
+
+        return input;
+    }
+
+let devs = [];
+let inputDevs = insertDevs(devs);
+console.log(inputDevs);
+for (dev of inputDevs) {
+    console.log(`${dev.nome} Tem as seguintes habilidades ${dev.habilidades}`);
+}
+    </script>
+</body>
+</html>

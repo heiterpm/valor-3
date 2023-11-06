@@ -30,26 +30,6 @@
             //Log do retorno da função kelvinParaFahrenheit utilizando como parâmetro o retorno da função grausCelsiusParaKelvin
             console.log(kelvinParaFahrenheit(grausCelsiusParaKelvin(temp)));
         }
-
-        programaConversao()
-
-        function programaCep() {
-            var cep = prompt('Digite seu cep')
-            function addHyphen(inputString) {
-                let result = '';
-                for (let i = 0; i < inputString.length; i++) {
-                    result += inputString[i];
-                    if (i === inputString.length - 4 && i !== 0) {
-                        result += '-';
-                    }
-                }
-
-                return result;
-            }
-
-            console.log(addHyphen(cep));
-        }
-        programaCep()
         
         
     </script>
