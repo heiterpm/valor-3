@@ -8,7 +8,7 @@
 <body>
     <script>
         
-        function insertDevs(devs) {
+        function insertDevs() {
         let input = [];
 
         while (true) {
@@ -36,11 +36,9 @@
 
         return input;
     }
-
-let devs = [];
-let inputDevs = insertDevs(devs);
-console.log(inputDevs);
-for (dev of inputDevs) {
+let devs = insertDevs();
+console.log(devs);
+for (dev of devs) {
     console.log(`${dev.nome} Tem as seguintes habilidades ${dev.habilidades}`);
 }
     </script>
