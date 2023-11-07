@@ -7,22 +7,37 @@
 </head>
 <body>
     <script>
-        
+        //Declaração da função que terá o programa
         function insertDevs() {
+
+        //Declaração do array input (Ou array de usuarios)
         let input = [];
 
+        //Loop de repetição, que repetirá por usuario/objeto
         while (true) {
+            //Criação de um array Skills para guardar as habilidades da pessoa especifica
             let skills = []
+
+            //Criação de uma variavle para guadar o nome da pessoa
             let name = prompt('Digite o nome do desenvolvedor:');
+
+            //Loop de repetição que repetira por habilidade
             while(true) {
+                
+                //Variavel skill que recebe um valor de habilidade
                 let skill = prompt('Digite as habilidades do desenvolvedor, clique em cancelar para finalizar as habilidades');
+                
+                //Caso skill for diferente de null
                 if(skill) {
+                    //Adicione do array skills
                     skills.push(skill)
                 } else {
+                    //Caso não, saia do loop de Habilidade
                     break
                 }
             }
-
+            
+            //Inserindo no array input os valores digitados anteriormente nome e o array com as habilidades skills
             input.push({
                 nome: name,
                 habilidades: skills
@@ -36,8 +51,10 @@
 
         return input;
     }
+    //Valores da função é igual a devs
 let devs = insertDevs();
 console.log(devs);
+//For of para mostrar os valores de cada valor de objeto
 for (dev of devs) {
     console.log(`${dev.nome} Tem as seguintes habilidades ${dev.habilidades}`);
 }
